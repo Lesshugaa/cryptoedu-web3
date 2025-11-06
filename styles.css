@@ -1,0 +1,187 @@
+/* === RESET & BASE === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a1a;
+  color: #e0e0ff;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+canvas#particles-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* === TYPOGRAPHY === */
+h1 { font-size: 3.5rem; font-weight: 900; background: linear-gradient(135deg, #4fc3f7, #81d4fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+h2 { font-size: 1.8rem; margin-bottom: 1rem; color: #4fc3f7; }
+.subtitle { font-size: 1.1rem; color: #81d4fa; margin-bottom: 1rem; font-weight: 500; }
+.eslogan { font-size: 1.4rem; font-style: italic; color: #b0bec5; margin-top: 1rem; }
+
+/* === LAYOUT === */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: radial-gradient(circle at center, rgba(79, 195, 247, 0.1), transparent);
+}
+.logo {
+  width: 90px; height: 90px; margin: 0 auto 20px;
+}
+.pro { color: #ff6b6b; font-weight: 700; }
+
+/* === CONTAINER === */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+/* === CRYPTO CARD === */
+.crypto-card {
+  background: rgba(30, 30, 60, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(79, 195, 247, 0.3);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.crypto-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg, #4fc3f7, #81d4fa);
+}
+.crypto-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(79, 195, 247, 0.2);
+  border-color: #4fc3f7;
+}
+.card-icon {
+  width: 50px; height: 50px; margin-bottom: 15px;
+}
+.features {
+  list-style: none;
+  margin: 15px 0;
+}
+.features li {
+  padding: 8px 0;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 25px;
+}
+.features li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #4fc3f7;
+}
+.btn-explore {
+  background: transparent;
+  border: 2px solid #4fc3f7;
+  color: #4fc3f7;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-explore:hover {
+  background: #4fc3f7;
+  color: #0a0a1a;
+}
+
+/* === BLOCKCHAIN VISUALIZER === */
+.blockchain-visualizer {
+  grid-column: 1 / -1;
+  background: rgba(20, 20, 40, 0.7);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+}
+#blockchain-container {
+  overflow-x: auto;
+  padding: 20px 0;
+}
+#blockchain-svg {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.block {
+  fill: #1e1e3c;
+  stroke: #4fc3f7;
+  stroke-width: 2;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+.block:hover { fill: #4fc3f7; }
+.hash-text { font-family: 'Courier New'; font-size: 11px; fill: #81d4fa; }
+.info-text { margin-top: 20px; font-size: 1rem; color: #b0bec5; }
+
+/* === WEB3 SIMULATOR === */
+.web3-simulator {
+  grid-column: 1 / -1;
+  background: rgba(40, 40, 80, 0.5);
+  border-radius: 20px;
+  padding: 30px;
+}
+.simulator-box {
+  background: #1a1a2e;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px dashed #4fc3f7;
+}
+#wallet-status { color: #ff6b6b; font-weight: 600; }
+.btn-connect {
+  background: #4fc3f7;
+  color: #0a0a1a;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.result {
+  margin-top: 15px;
+  padding: 15px;
+  background: #2d2d44;
+  border-radius: 10px;
+  font-family: monospace;
+}
+
+/* === WARNING & FOOTER === */
+.warning-banner {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #ff5252, #f44336);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+footer {
+  text-align: center;
+  padding: 50px 20px;
+  color: #777;
+  font-size: 0.9rem;
+}
+footer a { color: #4fc3f7; }
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  .container { grid-template-columns: 1fr; padding: 20px; }
+}

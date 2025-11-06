@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CryptoEdu Pro - Blockchain & Web3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <!-- BACKGROUND PARTICLES -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- HEADER -->
+  <header class="hero">
+    <div class="logo">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#4fc3f7" d="M50 10 L20 40 L35 40 L35 75 L65 75 L65 40 L80 40 Z"/>
+      </svg>
+    </div>
+    <h1>CryptoEdu <span class="pro">Pro</span></h1>
+    <p class="eslogan">"El futuro no se predice. Se programa en blockchain."</p>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- BITCOIN CARD -->
+    <section class="crypto-card" id="bitcoin">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm.4-3.6c-.4.8-1.2 1.4-2.4 1.4-1.6 0-2.8-1.2-2.8-3.2 0-1.2.6-2.2 1.6-2.8.4-.2.8-.4 1.2-.6v-1.2h1.2v1.2c.6.2 1 .6 1.2 1.2h-1.6c-.2-.4-.6-.6-1-.6-.6 0-1 .4-1 1 0 .6.4 1 1 1 .8 0 1.2.4 1.4 1 .2.4.2.8 0 1.2h-1.6c0-.4-.2-.8-.6-1h-1.6v2.4h1.6c.4.4 1 1 2 1 .8 0 1.4-.4 1.8-1 .2-.4.2-.8.2-1.2 0-.8-.4-1.4-1-1.8z"/></svg>
+      </div>
+      <h2>Bitcoin (BTC)</h2>
+      <p class="subtitle">El oro digital. Escaso. Seguro. Descentralizado.</p>
+      <ul class="features">
+        <li>21 millones de monedas (límite fijo)</li>
+        <li>Proof of Work: minería global</li>
+        <li>Creado en 2009 por Satoshi</li>
+        <li>Reserva de valor institucional</li>
+      </ul>
+      <button class="btn-explore" data-crypto="bitcoin">Explorar</button>
+    </section>
+
+    <!-- ETHEREUM CARD -->
+    <section class="crypto-card" id="ethereum">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 12l10 8 10-8L12 2zm0 3.2l5.8 8.8-5.8-2.4-5.8 2.4L12 5.2zm0 6.4l-5.8 2.4 5.8 3.4 5.8-3.4L12 11.6z"/></svg>
+      </div>
+      <h2>Ethereum (ETH)</h2>
+      <p class="subtitle">La computadora mundial. Programable. Viva.</p>
+      <ul class="features">
+        <li>Smart contracts autoejecutables</li>
+        <li>DeFi, NFTs, DAOs, juegos</li>
+        <li>Proof of Stake (desde 2022)</li>
+        <li>Base de Web3 y dApps</li>
+      </ul>
+      <button class="btn-explore" data-crypto="ethereum">Explorar</button>
+    </section>
+
+    <!-- BLOCKCHAIN VISUALIZER -->
+    <section class="blockchain-visualizer">
+      <h2>Visualización Interactiva de Blockchain</h2>
+      <div id="blockchain-container">
+        <svg id="blockchain-svg" viewBox="0 0 1000 220" xmlns="http://www.w3.org/2000/svg">
+          <!-- Se generará dinámicamente con JS -->
+        </svg>
+      </div>
+      <p class="info-text">
+        <strong>Cada bloque</strong> contiene transacciones + hash del anterior. <br>
+        <em>¡Inmutable por diseño!</em>
+      </p>
+    </section>
+
+    <!-- WEB3 SIMULATOR -->
+    <section class="web3-simulator">
+      <h2>Simulador Web3 (Ethers.js)</h2>
+      <div class="simulator-box">
+        <p><strong>Conectar wallet:</strong> <span id="wallet-status">Desconectado</span></p>
+        <button id="connect-wallet" class="btn-connect">Conectar MetaMask</button>
+        <div id="transaction-result" class="result hidden"></div>
+      </div>
+    </section>
+
+    <!-- WARNING -->
+    <div class="warning-banner">
+      <strong>¡CUIDADO!</strong> Nunca compartas tu <em>seed phrase</em>. Desconfiá de "airdrop gratis" y "x100 en 24h".
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 <strong>Leites Thiago</strong> | EEST N.º 1 “Eduardo Ader” – 7° 2° B</p>
+    <p>
+      <a href="https://github.com//cryptoedu-web3" target="_blank">Repositorio GitHub</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
